@@ -1,2 +1,71 @@
-# encryptX
-A python based tool for encrypting and decrypting file with military grade AES-256bit encryption and saltation with hashing. 
+## encryptX - Encryption/Decryption Tool Manual
+
+### Overview
+`encryptX` is a graphical tool for encrypting and decrypting files using AES-256 encryption with Python's `cryptography` library. It provides a user-friendly interface built with PyQt5.
+
+### Features
+- Encrypt files securely using AES-256 encryption in CFB mode with PKCS7 padding.
+- Decrypt previously encrypted files.
+- Password validation to ensure security requirements are met.
+- Progress bar to indicate encryption and decryption progress.
+- Monokai-themed GUI for a modern and sleek appearance.
+
+### Requirements
+- Python 3.x installed.
+- Required Python packages (`PyQt5`, `cryptography`).
+
+### Installation
+1. Ensure Python 3.x is installed on your system.
+2. Install PyQt5 and cryptography packages:
+   ```bash
+   pip install PyQt5 cryptography
+   ```
+3. Download the `encryptX` script.
+
+### Usage
+1. **Starting the Application:**
+   - Run the script (`encryptX.py`) from the command line:
+     ```bash
+     python encryptX.py
+     ```
+   - The application window titled "encryptX - Encryption/Decryption Tool" will appear.
+
+2. **Encryption:**
+   - Click on the "Select file to Encrypt" button.
+   - Choose the file you want to encrypt.
+   - Enter a strong password in the "Enter your password" and "Confirm your password" fields.
+   - Click on the "Encrypt" button.
+   - If successful, a message will indicate the encryption process completion.
+   - Progress of the encryption will be shown in the progress bar.
+
+3. **Decryption:**
+   - Click on the "Select file to Decrypt" button.
+   - Choose the file you want to decrypt.
+   - Enter the same password used during encryption in the "Enter your password" and "Confirm your password" fields.
+   - Click on the "Decrypt" button.
+   - If successful, a message will indicate the decryption process completion.
+   - Progress of the decryption will be shown in the progress bar.
+
+4. **Password Requirements:**
+   - Password must be at least 8 characters long.
+   - Must contain at least one digit, one special character, one uppercase letter, and one lowercase letter.
+
+5. **Error Handling:**
+   - If passwords do not match, a warning will prompt to re-enter.
+   - If password does not meet requirements, a warning will specify the deficiencies.
+   - Encryption or decryption failures will display an error message with details.
+
+6. **Styling:**
+   - The GUI is styled with a Monokai theme for an appealing visual experience.
+
+### Notes
+- Ensure to remember your password as it is essential for decryption.
+- Store encrypted files securely, along with their passwords.
+- For advanced users, encryption parameters such as key derivation function (Scrypt) parameters (`n`, `r`, `p`) can be adjusted within the script for enhanced security.
+
+### Troubleshooting
+- If encountering issues, ensure all required Python packages are installed.
+- Check the terminal/console for error messages that may provide clues to the problem.
+
+### Support
+For further assistance or feedback, contact me at earthtoyash@proton.me
